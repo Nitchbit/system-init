@@ -1,46 +1,52 @@
 #!/bin/bash
 
-# Root
-sudo -i
+# Define function
+Configure() {
+	# Root
+	sudo -i
 
-# Update the system
-apt-get update
-apt-get upgrade
+	# Update the system
+	apt-get update
+	apt-get upgrade
 
-apt-get install snapd
+	apt-get install snapd
 
-# Android Studio
-apt-get install openjdk-8-jdk
-snap install --classic android-studio
+	# Android Studio
+	apt-get install openjdk-8-jdk
+	snap install --classic android-studio
 
-# IntelliJ
-snap install --classic intellij-idea-community 
+	# IntelliJ
+	snap install --classic intellij-idea-community 
 
-# PycCarhm
-snap install --classic pycharm-community
+	# PycCarhm
+	snap install --classic pycharm-community
 
-# Sublime Text
-snap install --classic sublime-text
+	# Sublime Text
+	snap install --classic sublime-text
 
-# Wireshark
-apt-get install wireshark
+	# Wireshark
+	apt-get install wireshark
 
-# Ardour
-apt-get install ardour
+	# Ardour
+	apt-get install ardour
 
-# Blender
-snap install --classic blender
+	# Blender
+	snap install --classic blender
 
-# Gimp
-snap install gimp
+	# Gimp
+	snap install gimp
 
-# Kdenlive
-snap install kdenlive
+	# Kdenlive
+	snap install kdenlive
 
-# Update the system
-apt-get update
-apt-get upgrade
-atp-get autoremove
-snap refresh
+	# Update the system
+	apt-get update
+	apt-get upgrade
+	atp-get autoremove
+	snap refresh
 
-exit
+	exit
+}
+
+# Invoke function
+Configure
