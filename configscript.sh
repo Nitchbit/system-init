@@ -3,7 +3,7 @@
 # Define function
 Configure() {
 	# Root
-	sudo -i
+	#sudo -i
 
 	# Update the system
 	apt-get update
@@ -45,7 +45,7 @@ Configure() {
 	atp-get autoremove
 	snap refresh
 
-	exit
+	#exit
 }
 
 # Invoke function
