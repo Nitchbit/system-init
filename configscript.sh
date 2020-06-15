@@ -2,6 +2,7 @@
 
 # Configuring dpkg
 sudo dpkg --configure -a
+
 # Removing all
 if [[ $1 = "-removeall" ]]; then
 	sudo apt-get purge -y openjdk-8-jdk
