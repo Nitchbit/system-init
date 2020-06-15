@@ -15,7 +15,6 @@ if [[ $1 = "-removeall" ]]; then
 	sudo snap remove blender
 	sudo snap remove gimp
 	sudo snap remove kdenlive
-	sudo apt-get autoremove -y
 	
 # Installing all
 else 
@@ -54,9 +53,10 @@ else
 	# Kdenlive
 	sudo snap install kdenlive
 
-	# Update the system
-	sudo apt-get update -y
-	sudo apt-get upgrade -y
-	sudo apt-get autoremove -y
-	sudo snap refresh
 fi
+
+# Update the system
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get autoremove -y
+sudo snap refresh
