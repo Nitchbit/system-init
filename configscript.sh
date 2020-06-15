@@ -2,6 +2,8 @@
 
 # Configuring dpkg
 sudo dpkg --configure -a
+sudo apt-get install -y snapd
+sudo apt-get install -y gparted
 
 # Removing all
 if [[ $1 = "-removeall" ]]; then
@@ -15,15 +17,13 @@ if [[ $1 = "-removeall" ]]; then
 	sudo snap remove blender
 	sudo snap remove gimp
 	sudo snap remove kdenlive
-
+	sudo apt-get purge -y snapd
+	sudo apt-get purge -y gparted
 # Installing productivity softwares
 elif [[ $1 = "-productivity" ]]; then
 	# Update the system
 	sudo apt-get update -y
 	sudo apt-get upgrade -y
-	
-	# Install sudo snapd
-	sudo apt-get install -y snapd
 	
 	# Android Studio
 	sudo apt-get install -y openjdk-8-jdk
@@ -100,6 +100,9 @@ else
 	
 	# WhatsApp Desktop
 	sudo snap install whatsdesk
+	
+	# Gnome Tweak Tool
+	sudo apt-get install -y gnome-tweak-tool
 fi
 
 # Update the system
