@@ -5,9 +5,9 @@ sudo dpkg --configure -a
 
 # Removing all
 if [[ $1 = "-removeall" ]]; then
-	sudo apt-get purge -y openjdk-8-jdk
-	sudo apt-get purge -y wireshark
-	sudo apt-get purge -y ardour
+	sudo apt purge -y openjdk-8-jdk
+	sudo apt purge -y wireshark
+	sudo apt purge -y ardour
 	sudo snap remove android-studio
 	sudo snap remove intellij-idea-community
 	sudo snap remove pycharm-community
@@ -15,20 +15,20 @@ if [[ $1 = "-removeall" ]]; then
 	sudo snap remove blender
 	sudo snap remove gimp
 	sudo snap remove kdenlive
-	sudo apt-get purge -y snapd
-	sudo apt-get purge -y gparted
+	sudo apt purge -y snapd
+	sudo apt purge -y gparted
 fi
 
 # Update the system
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install -y snapd
-sudo apt-get install -y gparted
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install -y snapd
+sudo apt install -y gparted
 
 # Installing productivity softwares
 if [[ $1 = "-productivity" ]]; then
 	# Android Studio
-	sudo apt-get install -y openjdk-8-jdk
+	sudo apt install -y openjdk-8-jdk
 	sudo snap install --classic android-studio
 
 	# IntelliJ
@@ -43,10 +43,10 @@ if [[ $1 = "-productivity" ]]; then
 # Installing creativity softwares
 elif [[ $1 = "-creativity" ]]; then
 	# Wireshark
-	sudo apt-get install -y wireshark
+	sudo apt install -y wireshark
 
 	# Ardour
-	sudo apt-get install -y ardour
+	sudo apt install -y ardour
 
 	# Blender
 	sudo snap install --classic blender
@@ -60,10 +60,10 @@ elif [[ $1 = "-creativity" ]]; then
 # Installing all
 else 
 	# Install sudo snapd
-	sudo apt-get install -y snapd
+	sudo apt install -y snapd
 
 	# Android Studio
-	sudo apt-get install -y openjdk-8-jdk
+	sudo apt install -y openjdk-8-jdk
 	sudo snap install --classic android-studio
 
 	# IntelliJ
@@ -76,10 +76,10 @@ else
 	sudo snap install --classic sublime-text
 
 	# Wireshark
-	sudo apt-get install -y wireshark
+	sudo apt install -y wireshark
 
 	# Ardour
-	sudo apt-get install -y ardour
+	sudo apt install -y ardour
 
 	# Blender
 	sudo snap install --classic blender
@@ -100,14 +100,15 @@ else
 	sudo snap install whatsdesk
 	
 	# Gnome Tweak Tool
-	sudo apt-get install -y gnome-tweak-tool
+	sudo apt install -y gnome-tweak-tool
 	
 	# Neofetch
-	sudo apt-get install -y neofetch
+	sudo apt install -y neofetch
 fi
 
 # Update the system
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get autoremove -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt autoremove -y
+sudo apt full-upgrade -y
 sudo snap refresh
