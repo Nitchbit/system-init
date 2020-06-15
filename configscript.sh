@@ -5,7 +5,6 @@ sudo dpkg --configure -a
 
 # Removing all
 if [[ $1 = "-removeall" ]]; then
-	sudo apt purge -y openjdk-8-jdk
 	sudo apt purge -y wireshark
 	sudo apt purge -y ardour
 	sudo snap remove android-studio
@@ -28,7 +27,6 @@ sudo apt install -y gparted
 # Installing productivity softwares
 if [[ $1 = "-productivity" ]]; then
 	# Android Studio
-	sudo apt install -y openjdk-8-jdk
 	sudo snap install --classic android-studio
 
 	# IntelliJ
