@@ -16,6 +16,7 @@ if [[ $1 = "-removeall" ]]; then
 	sudo snap remove gimp
 	sudo snap remove kdenlive
 
+# Installing productivity softwares
 elif [[ $1 = "-productivity" ]]; then
 	# Update the system
 	sudo apt-get update -y
@@ -37,6 +38,7 @@ elif [[ $1 = "-productivity" ]]; then
 	# Sublime Text
 	sudo snap install --classic sublime-text
 
+# Installing creativity softwares
 elif [[ $1 = "-creativity" ]]; then
 	# Wireshark
 	sudo apt-get install -y wireshark
