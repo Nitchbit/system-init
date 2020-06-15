@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Configuring dpkg
+sudo dpkg --configure -a
+# Removing all
 if [[ $1 = "-removeall" ]]; then
 	sudo apt-get purge -y openjdk-8-jdk
 	sudo apt-get purge -y wireshark
@@ -12,6 +15,8 @@ if [[ $1 = "-removeall" ]]; then
 	sudo snap remove gimp
 	sudo snap remove kdenlive
 	sudo apt-get autoremove -y
+	
+# Installing all
 else 
 	# Update the system
 	sudo apt-get update -y
