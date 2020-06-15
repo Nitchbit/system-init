@@ -11,7 +11,7 @@ if [[ $1 = "-removeall" ]]; then
 	sudo snap remove android-studio
 	sudo snap remove intellij-idea-community
 	sudo snap remove pycharm-community
-	#sudo snap remove sublime-text
+	sudo snap remove sublime-text
 	sudo snap remove blender
 	sudo snap remove gimp
 	sudo snap remove kdenlive
