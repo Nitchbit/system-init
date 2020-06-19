@@ -14,16 +14,16 @@ sudo apt install -y neofetch
 
 FLAG=0
 while read line; do
-	if [[ $line = "#ToInstall" ]]; then
+	if [[ $line = "#TOINSTALL" ]]; then
 		FLAG=1
 		continue;
 	fi
-	if [[ $line = "#ToRemove" ]]; then
+	if [[ $line = "#TOREMOVE" ]]; then
 		FLAG=-1
 		continue;
 	fi
 	if [[ $FLAG = 1 ]]; then
-		if sudo snap install $line; then
+		if sudo snap install --classic $line; then
 			continue;
 		else
 			sudo apt install -y $line;
@@ -31,12 +31,8 @@ while read line; do
 		fi
 	fi
 	if [[ $FLAG = -1 ]]; then
-		if sudo snap remove $line; then
-			continue;
-		else 
-			sudo apt purge -y $line;
-			continue;
-		fi
+		sudo snap remove $line;
+		sudo apt purge -y $line;
 	fi
 done < $PWD/init_sysscript.config
 
