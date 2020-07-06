@@ -1,8 +1,9 @@
 # useful-script
+A collection of useful scripts, like the one that allow you to keep you system up-to-date with a single command.
 
 ## sysscript.sh
 It's a script that read the .config file and automatically install or remove the specified packages(temporary works only with
-unix systems that have compability with apt and snap
+unix systems that have compability with apt and snap.
 
 ## init_sysscript.config
 It's the file where you have to list the names of the packages that you want to install, if it's empty the script will simply
